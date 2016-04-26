@@ -6,10 +6,12 @@
 class GameOfLife {
     GameOfLife(); // unbounded grid
     GameOfLife(int height, int width, bool toroid); // bounded grid
-    GameOfLife(bool** grid, int height, int width, bool toroid); // copy grid
-    ~GameOfLife();
+    GameOfLife(bool** grid, bool bounded, int height, int width, bool toroid); // copy grid
+    GameOfLife(std::vector<std::vector<bool> >& grid, bool bounded, int height, int width,
+            bool toroid); // copy grid
+    GameOfLife(bool bounded, int height, int width, bool toroid);
 
-    void setAlive(int x, int y);
+    void setAlive(int r, int c, bool alive);
     void printGrid();
     void run_round();
     void run(int rounds) {
