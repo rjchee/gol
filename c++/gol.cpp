@@ -24,7 +24,9 @@ GameOfLife::GameOfLife(bool bounded, int height, int width, bool toroid) :
     grow(!bounded),
     wrap_around(toroid),
     height(height),
-    width(width) {}
+    width(width),
+    dr(0),
+    dc(0) {}
 
 void GameOfLife::setAlive(int r, int c, bool alive) {
     if (r < 0 || r >= height || c < 0 || c >= height) {

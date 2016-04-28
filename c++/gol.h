@@ -24,7 +24,7 @@ private:
     std::vector<std::vector<bool> > grid;
     std::vector<std::vector<bool> > copy;
     bool grow, wrap_around;
-    int height, width;
+    int height, width, dr, dc;
 };
 
 #endif
